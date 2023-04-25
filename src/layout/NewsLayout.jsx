@@ -6,17 +6,13 @@ import Header from '../shared/Header/Header';
 import LeftNav from '../shared/LeftNav/LeftNav';
 import RigthNav from '../shared/RigthNav/RigthNav';
 
-const Main = () => {
+const NewsLayout = () => {
 	return (
 		<div>
 			<Header></Header>
 			<Container>
 				<Row>
-					<Col lg={3}>
-						<LeftNav></LeftNav>
-					</Col>
-
-					<Col lg={6}>
+					<Col lg={9}>
 						<Outlet></Outlet>
 					</Col>
 
@@ -30,4 +26,4 @@ const Main = () => {
 	);
 };
 
-export default Main;
+export default NewsLayout;
