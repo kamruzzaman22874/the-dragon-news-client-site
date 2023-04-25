@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import EditorInsightLeft from '../../pages/News/EditorInsightLeft/EditorInsightLeft';
 
 const LeftNav = () => {
 	const [categories, setCategoties] = useState([]);
@@ -20,6 +21,7 @@ const LeftNav = () => {
 					</p>
 				))}
 			</div>
+			<EditorInsightLeft></EditorInsightLeft>
 		</div>
 	);
 };
