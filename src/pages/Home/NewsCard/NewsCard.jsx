@@ -45,19 +45,15 @@ const NewsCard = ({ news }) => {
 					)}
 				</Card.Text>
 			</Card.Body>
-			<Card.Footer className='text-muted d-flex'>
-				<div className='flex-grow-1'>
-					<Rating>
-                        placeholderRating={rating.number}
-                        readonly
-						emptySymbol=
-						{<FaRegStar></FaRegStar>}
-						placeholderSymbol=
-						{<FaStar className='text-warning'></FaStar>}
-						fullSymbol=
-						{<FaStar></FaStar>}
-					</Rating>
-					<span>{rating?.number}</span>
+			<Card.Footer className='text-muted d-flex '>
+				<div className='d-flex flex-grow-1 align-items-center '>
+					<Rating
+						placeholderRating={rating.number}
+						readonly
+						emptySymbol={<FaRegStar></FaRegStar>}
+						placeholderSymbol={<FaStar className='text-warning'></FaStar>}
+						fullSymbol={<FaStar></FaStar>}></Rating>
+					<span className='ms-2'>{rating?.number}</span>
 				</div>
 				<div>
 					<FaEye /> {total_view}

@@ -3,10 +3,11 @@ import LoginLayout from '../layout/LoginLayout';
 import Main from '../layout/Main';
 import NewsLayout from '../layout/NewsLayout';
 import Category from '../pages/Home/Category/Category';
-import Home from '../pages/Home/Home/Home';
 import Login from '../pages/Login/Login/Login';
 import Register from '../pages/Login/Register/Register';
 import News from '../pages/News/News/News';
+import Terms from '../shared/Terms/Terms';
+import PrivateRoutes from './PrivateRoutes';
 
 const router = createBrowserRouter([
 	{
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 				path: 'register',
 				element: <Register></Register>,
 			},
+			{
+				path: '/terms',
+				element: <Terms/>
+			}
 		],
 	},
 	{
@@ -45,7 +50,11 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: ':id',
-				element: <News></News>,
+				element: (
+					<PrivateRoutes>
+						<News></News>
+					</PrivateRoutes>
+				),
 				loader: ({ params }) =>
 					fetch(`http://localhost:5000/news/${params.id}`),
 			},

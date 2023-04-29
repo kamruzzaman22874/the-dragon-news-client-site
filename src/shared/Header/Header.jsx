@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import logo from '../../assets/logo.png';
-import { Button, Container} from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import Marquee from 'react-fast-marquee';
 import { useContext } from 'react';
 
